@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bt {
+    width: 180px;
+    height: 100px;
+    margin: 50px;
+    background: #2972cb;
+}
+
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.popup {
+    position: fixed;
+    // height: 800px;
+    // width: auto;
+    // top: 20%;
+    font-size: 14px;
+    z-index: 2888;
+    background: #fff;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.09);
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        background: #fff;
+        height: 62px;
+        display: flex;
+        padding-top: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        flex: none;
+
+        .title_text {
+            flex: 1;
+            overflow: hidden; //隐藏
+            white-space: nowrap; //不换行
+            text-overflow: ellipsis; //超出部分省略号
+            font-size: 16px;
+            font-weight: bold;
+            color: #2d2d2d;
+        }
+
+        .title_btn {
+            display: flex;
+        }
+    }
+
+    .title_shadow {
+        width: 100%;
+        height: 16px;
+        background: linear-gradient(to bottom, #eee, #fff);
+        flex: none;
+    }
+
+    .content {
+        // height: calc(100% - 16px - 62px);
+        overflow: auto;
+        // display: flex;
+        // justify-content: center;
+    }
+
+    .close,
+    .big {
+        margin: 0 10px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    .bottom,
+    .left-bottom,
+    .right-top,
+    .right,
+    .top,
+    .left,
+    .top-left,
+    .bottom-right {
+        position: absolute;
+    }
+
+    .top {
+        width: calc(100% - 8px);
+        height: 4px;
+        top: 0;
+        left: 4px;
+        cursor: s-resize;
+    }
+
+    .bottom {
+        width: calc(100% - 8px);
+        height: 4px;
+        left: 4px;
+        bottom: 0;
+        cursor: s-resize;
+    }
+
+    .right {
+        height: calc(100% - 8px);
+        width: 4px;
+        top: 4px;
+        right: 0;
+        cursor: e-resize;
+    }
+
+    .left {
+        height: calc(100% - 8px);
+        width: 4px;
+        top: 4px;
+        left: 0px;
+        cursor: e-resize;
+    }
+
+    .top-left {
+        width: 8px;
+        height: 8px;
+        top: 0;
+        left: 0;
+        cursor: se-resize;
+    }
+
+    .left-bottom {
+        width: 8px;
+        height: 8px;
+        left: 0;
+        bottom: 0;
+        cursor: sw-resize;
+    }
+
+    .bottom-right {
+        width: 8px;
+        height: 8px;
+        right: 0;
+        bottom: 0;
+        cursor: se-resize;
+    }
+
+    .right-top {
+        width: 8px;
+        height: 8px;
+        right: 0;
+        top: 0;
+        cursor: sw-resize;
+    }
+}
